@@ -22,7 +22,7 @@ module.exports = {
         "max-statements-per-line": ["warn", {max: 1}], // ограничение на кол-во выражений в 1 строке
         "semi": ["error", "always"],
         "no-multiple-empty-lines": "off",
-        "indent": ["warn", 4, {SwitchCase: 1}],
+        "indent": ["warn", 4, {SwitchCase: 1, "ignoredNodes": ["PropertyDefinition"]}],
         "no-debugger": "error",
 
         /* variables */
@@ -43,7 +43,7 @@ module.exports = {
         "import/no-default-export": "error",
         "import/no-relative-parent-imports": "error", // использование относительных импортов из родительской директории
         "import/newline-after-import": ["warn", {count: 2}], // как минимум 2 пустых строки после импортов
-                        // TODO:  https://github.com/import-js/eslint-plugin-import/issues/2522
+        // TODO:  https://github.com/import-js/eslint-plugin-import/issues/2522
 
         "no-duplicate-imports": ["error"],  // повторный импорт одного и того же модуля
         "react/jsx-uses-react": "error", // чтобы не ругалось на не используемый импорт import React from "react
@@ -71,7 +71,6 @@ module.exports = {
         /* typescript */
         // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/type-annotation-spacing.md
         "@typescript-eslint/restrict-plus-operands": "error",
-
 
 
         "@typescript-eslint/member-delimiter-style": "warn",

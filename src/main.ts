@@ -1,9 +1,26 @@
 import {NestFactory} from "@nestjs/core";
+import {SwaggerModule, DocumentBuilder} from "@nestjs/swagger";
 import {AppModule} from "./app.module";
 
 
-async function bootstrap() {
+const bootstrap = async () => {
     const app = await NestFactory.create(AppModule);
+
+    const config = new DocumentBuilder()
+        .setTitle('Cats example')
+        .setDescription('The cats API description')
+        .setVersion('1.0')
+        .addTag('book')
+        .addBearerAuth()
+        .build();
+
+    const document = SwaggerModule.createDocument(app, config);
+    SwaggerModule.setup("swagger", app, document);
+
     await app.listen(3001);
-}
-bootstrap();
+
+};
+
+void bootstrap();
+
+

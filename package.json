@@ -21,10 +21,15 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@adminjs/express": "^5.0.1",
+    "@adminjs/nestjs": "^5.0.1",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/mongoose": "^9.2.0",
     "@nestjs/platform-express": "^9.0.0",
+    "adminjs": "^6.2.4",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.3",
     "mongoose": "^6.6.5",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
@@ -33,6 +38,7 @@
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
+    "@nestjs/swagger": "^6.1.2",
     "@nestjs/testing": "^9.0.0",
     "@types/express": "^4.17.13",
     "@types/jest": "28.1.8",
